@@ -54,9 +54,12 @@ const nextConfig = {
       '/xo',
       // social network
       '/discord',
+      '/gitter',
       '/matrix',
       '/runkit',
       '/peertube',
+      // utilities
+      '/liberapay',
       // discontinued
       '/apm',
       '/lgtm',

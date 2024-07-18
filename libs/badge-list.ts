@@ -41,8 +41,6 @@ export const liveBadgeList = [
   // social
   'devrant',
   'reddit',
-  // chat
-  'gitter',
   // utilities
   'opencollective',
   'keybase',
@@ -50,12 +48,11 @@ export const liveBadgeList = [
   'mastodon',
   'tidelift',
   'jenkins',
-  'liberapay',
 ]
 
 export async function loadBadgeMeta() {
   const liveBadgeExamples = await Promise.all(liveBadgeList.map(async id => {
-    const mod = await import(rel('../api-', id))
+    const mod = await import(rel('../api-legacy', id))
     const { title, examples, handlers } = mod.default.meta
 
     return {
