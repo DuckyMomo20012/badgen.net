@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "regions": [
-    "all"
-  ],
   "rewrites": [
     {
       "source": "/appveyor/:match*",
@@ -166,13 +163,7 @@
   "functions": {
     "pages/api/**/*": {
       "memory": 128,
-      "maxDuration": 10
+      "maxDuration": 60
     }
-  },
-  "env": {
-    "GH_TOKENS": "@badgen-gh-tokens",
-    "SENTRY_DSN": "@badgen-sentry-dsn",
-    "GA_MEASUREMENT_ID": "@badgen-tracking-ga",
-    "GITLAB_TOKENS": "@badgen-gl-tokens"
   }
 }
